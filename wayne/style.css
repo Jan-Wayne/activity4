@@ -1,0 +1,140 @@
+:root {
+  --bg: #f4f6f9;
+  --card: #fff;
+  --text: #111;
+  --muted: #6b7280;
+  --primary: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --ok: #16a34a;
+  --err: #dc2626;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+h2 {
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .15s ease;
+}
+
+input[type="password"]:focus {
+  border-color: var(--primary);
+}
+
+.row {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+#message {
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.success { color: var(--ok); }
+.error { color: var(--err); }
+
+.hints {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+ul.rules {
+  margin: 10px 0 0 18px;
+  padding: 0;
+}
+
+ul.rules li {
+  margin: 4px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.chip {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.ok {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.bad {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
